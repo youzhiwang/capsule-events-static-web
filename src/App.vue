@@ -1,32 +1,45 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <div class="top-bar-wrapper">
+            <top-bar></top-bar>
+        </div>
+        <div class="body-wrapper">
+            <router-view/>
+        </div>
+        <div class="bottom-bar-wrapper">
+            <bottom-bar></bottom-bar>
+        </div>
     </div>
-    <router-view/>
-  </div>
 </template>
+<script>
+  import TopBar from '@/components/TopBar/index.vue'
+  import BottomBar from '@/components/BottomBar/index.vue'
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  export default {
+    name: 'app',
+    components: {TopBar, BottomBar}
   }
-}
+</script>
+<style lang="scss">
+    html, body {
+        width: 100%;
+        min-width: 1200px;
+        height: 100%;
+    }
+
+    #app {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        height: 100%;
+    }
+
+    .body-wrapper {
+        min-height: calc(100% - 120px);
+    }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
 </style>
