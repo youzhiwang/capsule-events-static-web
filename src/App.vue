@@ -5,8 +5,7 @@
         </div>
         <div class="body-wrapper">
             <router-view/>
-        </div>
-        <div class="bottom-bar-wrapper">
+
             <bottom-bar></bottom-bar>
         </div>
     </div>
@@ -33,10 +32,18 @@
         -moz-osx-font-smoothing: grayscale;
         height: 100%;
         overflow: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-bar-wrapper {
+        flex-grow: 0;
+        flex-shrink: 0;
     }
 
     .body-wrapper {
-        min-height: calc(100% - 120px);
+        min-height: calc(100% - 60px);
+        overflow: auto;
     }
 
     .icon {

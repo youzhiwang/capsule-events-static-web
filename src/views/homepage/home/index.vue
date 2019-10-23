@@ -1,8 +1,8 @@
 <template>
-    <div class="home-furnishing">
+    <div class="home">
         <p class="title">家居</p>
-        <div class="home-furnishing-container">
-            <div v-for="(item, index) in homeFurnishingData" :key="index" class="item">
+        <div class="home-container">
+            <div v-for="(item, index) in homeData" :key="index" class="item">
                 <b-card no-body class="overflow-hidden">
                     <b-row no-gutters>
                         <b-col cols="6">
@@ -19,36 +19,36 @@
             </div>
         </div>
         <div class="link-more">
-            <b-button href="/home-furnishing" size="sm" variant="primary">探索更多</b-button>
+            <b-button href="/home" size="sm" variant="primary">探索更多</b-button>
         </div>
     </div>
 </template>
 
 <script>
-  import homeFurnishingData from './homeFurnishingData'
+  import homeData from './homeData'
 
   export default {
-    name: 'home-furnishing',
+    name: 'home',
     data() {
       return {
-        homeFurnishingData
+        homeData
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-    .home-furnishing {
+    .home {
         width: 1200px;
         margin: 0 auto;
 
         .title {
             text-align: center;
             font-size: 32px;
-            margin: 24px 0;
+            margin: 40px 0;
         }
 
-        .home-furnishing-container {
+        .home-container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -58,7 +58,7 @@
             }
         }
 
-        .link-more{
+        .link-more {
             text-align: center;
             margin: 24px 0;
         }

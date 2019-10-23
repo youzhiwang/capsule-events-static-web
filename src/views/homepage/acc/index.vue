@@ -8,7 +8,8 @@
             <div class="text-container">
                 <span class="text">{{accData.text}}</span>
                 <div class="link">
-                    <b-button class="button" :href="accData.tblink" target="_blank" variant="primary" size="sm">前 往</b-button>
+                    <b-button class="button" :href="accData.tblink" target="_blank" variant="primary" size="sm">前 往
+                    </b-button>
                     <b-button class="button" href="/acc" size="sm" variant="primary">探索更多</b-button>
                 </div>
             </div>
@@ -37,7 +38,7 @@
         .title {
             text-align: center;
             font-size: 32px;
-            margin: 24px 0;
+            margin: 40px 0;
         }
 
         .acc-container {

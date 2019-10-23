@@ -1,5 +1,5 @@
 <template>
-    <div class="bag">
+    <div class="bags">
         <p class="title">包袋</p>
         <div class="bag-container">
             <div class="left-container">
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="link-more">
-            <b-button href="/bag" size="sm" variant="primary">探索更多</b-button>
+            <b-button href="/bags" size="sm" variant="primary">探索更多</b-button>
         </div>
     </div>
 </template>
@@ -40,14 +40,14 @@
 </script>
 
 <style lang="scss" scoped>
-    .bag {
+    .bags {
         width: 1200px;
         margin: 0 auto;
 
         .title {
             text-align: center;
             font-size: 32px;
-            margin: 24px 0;
+            margin: 40px 0;
         }
 
         .bag-container {
@@ -71,6 +71,7 @@
                 justify-content: center;
                 justify-items: center;
                 align-items: center;
+                overflow: hidden;
             }
 
             .right-container {
@@ -82,6 +83,7 @@
 
                 .right-top-container, .right-bottom-container {
                     flex: 1;
+                    overflow: hidden;
                 }
 
                 .right-top-container {

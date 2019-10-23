@@ -1,11 +1,11 @@
 <template>
-    <div class="bag">
+    <div class="list">
         <div class="animation-title-wrapper">
             <animation-title v-if="isShowAnimationTitle">
-                <template v-if="$route.name === 'bag'" name='default'>
+                <template v-if="$route.name === 'bags'" name='default'>
                     <span>每一款包袋，都别出心裁</span>
                 </template>
-                <template v-if="$route.name === 'homeFurnishing'" name='default'>
+                <template v-if="$route.name === 'home'" name='default'>
                     <span>特立独行，样样都好</span>
                 </template>
                 <template v-if="$route.name === 'acc'" name='default'>
@@ -37,7 +37,7 @@
                         img-top
                         tag="article">
                     <b-card-text>{{item.text}}</b-card-text>
-                    <b-button :href="item.tblink" variant="primary" size="sm">前 往</b-button>
+                    <b-button :href="item.tblink" variant="primary" size="sm" target="_blank">前 往</b-button>
                 </b-card>
             </b-col>
             <div v-if="showData.length === 0" class="tips">
@@ -50,7 +50,7 @@
 <script>
   import AnimationTitle from '@/components/AnimationTitle'
   import bagData from './bagData'
-  import homeFurnishingData from './homeFurnishingData'
+  import homeData from './homeData'
   import accData from './accData'
   import clothesData from './clothesData'
   import shoesData from './shoesData'
@@ -61,7 +61,7 @@
     data() {
       return {
         bagData, // 包袋
-        homeFurnishingData, // 家居
+        homeData, // 家居
         accData, // 配饰
         clothesData, // 服饰
         shoesData, // 鞋饰
@@ -79,18 +79,19 @@
         })
         this.showData = list
       },
+      // 根据路由名称，设置对应的静态数据
       setData() {
         this.redrawAnimation()
         this.keywords = ''
         const name = this.$route.name
         switch (name) {
-          case 'bag':
+          case 'bags':
             this.listData = JSON.parse(JSON.stringify(this.bagData))
             this.showData = JSON.parse(JSON.stringify(this.bagData))
             break
-          case 'homeFurnishing':
-            this.listData = JSON.parse(JSON.stringify(this.homeFurnishingData))
-            this.showData = JSON.parse(JSON.stringify(this.homeFurnishingData))
+          case 'home':
+            this.listData = JSON.parse(JSON.stringify(this.homeData))
+            this.showData = JSON.parse(JSON.stringify(this.homeData))
             break
           case 'acc':
             this.listData = JSON.parse(JSON.stringify(this.accData))
@@ -130,7 +131,9 @@
 </script>
 
 <style lang="scss" scoped>
-    .bag {
+    .list {
+        min-height: calc(100% - 60px);
+
         .animation-title-wrapper {
             min-height: 140px;
         }

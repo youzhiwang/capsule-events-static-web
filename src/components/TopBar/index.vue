@@ -1,15 +1,17 @@
 <template>
     <div class="top-bar">
         <div class="top-bar-main">
-            <router-link :to="{name: 'home'}" @click.native="closeSubTopBar">
+            <router-link :to="{name: 'homepage'}" @click.native="closeSubTopBar">
                 <img class="logo" :src="logo" alt="CAPSULE EVENTS">
             </router-link>
             <icon class="icon" name="align-justify" @click.native="showSubTopBar"></icon>
+            <div class="blank"></div>
+            <!-- <span class="language" @click.native="handleLanguageChange">English</span> -->
         </div>
         <div class="sub-top-bar" :class="{'hidden': isHidden}">
-            <router-link class="link" :to="{name: 'bag'}" @click.native="showSubTopBar">包袋</router-link>
+            <router-link class="link" :to="{name: 'bags'}" @click.native="showSubTopBar">包袋</router-link>
             <span class="divider">/</span>
-            <router-link class="link" :to="{name: 'homeFurnishing'}" @click.native="showSubTopBar">家居</router-link>
+            <router-link class="link" :to="{name: 'home'}" @click.native="showSubTopBar">家居</router-link>
             <span class="divider">/</span>
             <router-link class="link" :to="{name: 'acc'}" @click.native="showSubTopBar">配饰</router-link>
             <span class="divider">/</span>
@@ -38,6 +40,10 @@
       },
       closeSubTopBar() {
         this.isHidden = true
+      },
+      // 切换语言
+      handleLanguageChange() {
+
       }
     }
   }
@@ -60,6 +66,16 @@
         .icon {
             width: 30px;
             height: 30px;
+            cursor: pointer;
+        }
+
+        .blank {
+            flex: 1;
+        }
+
+        .language {
+            font-size: 12px;
+            padding: 0 24px;
             cursor: pointer;
         }
     }

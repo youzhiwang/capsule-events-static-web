@@ -1,4 +1,3 @@
-
 export default [
   {
     src: '//img.alicdn.com/bao/uploaded/i2/2150857113/O1CN01oOmGQh22PngkX0l67_!!2150857113.png_240x240.jpg',
