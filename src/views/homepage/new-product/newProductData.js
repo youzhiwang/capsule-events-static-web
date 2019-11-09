@@ -1,4 +1,5 @@
 export default {
-  src: 'https://s2.ax1x.com/2019/10/22/K35zZT.jpg',
+  title: '新品预告',
+  src: 'https://s2.ax1x.com/2019/11/09/MmgzdJ.jpg',
   tblink: ''
 }

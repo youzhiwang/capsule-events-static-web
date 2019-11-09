@@ -1,6 +1,6 @@
 <template>
     <div class="new-product" v-if="newProductData.src !== ''">
-        <p class="title">新品预告</p>
+        <p class="title">{{newProductData.title}}</p>
         <img :src="newProductData.src" alt="" width="100%">
     </div>
 </template>

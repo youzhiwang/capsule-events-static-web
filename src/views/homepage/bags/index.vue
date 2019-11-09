@@ -3,18 +3,27 @@
         <p class="title">包袋</p>
         <div class="bag-container">
             <div class="left-container">
-                <a :href="bagData[0].tblink" target="_blank">
+                <a v-if="bagData[0].tblink !== ''" :href="bagData[0].tblink" target="_blank">
+                    <img :src="bagData[0].src" alt="">
+                </a>
+                <a v-else>
                     <img :src="bagData[0].src" alt="">
                 </a>
             </div>
             <div class="right-container">
                 <div class="right-top-container">
-                    <a :href="bagData[1].tblink" target="_blank">
+                    <a v-if="bagData[1].tblink !== ''" :href="bagData[1].tblink" target="_blank">
+                        <img :src="bagData[1].src" alt="">
+                    </a>
+                    <a v-else>
                         <img :src="bagData[1].src" alt="">
                     </a>
                 </div>
                 <div class="right-bottom-container">
-                    <a :href="bagData[2].tblink" target="_blank">
+                    <a v-if="bagData[2].tblink !== ''" :href="bagData[2].tblink" target="_blank">
+                        <img :src="bagData[2].src" alt="">
+                    </a>
+                    <a v-else>
                         <img :src="bagData[2].src" alt="">
                     </a>
                 </div>
