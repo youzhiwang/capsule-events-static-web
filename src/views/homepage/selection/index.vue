@@ -1,15 +1,17 @@
 <template>
     <div class="selection">
-        <p class="title">精选</p>
-        <div class="selction-container">
-            <b-card v-for="(item, index) in selectionData" :key="index"
-                    class="selection-item"
-                    :img-src="item.src"
-                    img-top
-                    tag="article">
-                <b-card-text>{{item.text}}</b-card-text>
-                <b-button :href="item.tblink" target="_blank" variant="primary" size="sm">前 往</b-button>
-            </b-card>
+        <div class="selection-container">
+            <p class="title">精选</p>
+            <div class="selction-container">
+                <b-card v-for="(item, index) in selectionData" :key="index"
+                        class="selection-item"
+                        :img-src="item.src"
+                        img-top
+                        tag="article">
+                    <b-card-text>{{item.text}}</b-card-text>
+                    <b-button :href="item.tblink" target="_blank" variant="primary" size="sm">前 往</b-button>
+                </b-card>
+            </div>
         </div>
     </div>
 </template>
@@ -29,24 +31,29 @@
 
 <style lang="scss" scoped>
     .selection {
-        margin: 0 auto;
-        width: 1200px;
+        background-color: #ffffff;
+        overflow: hidden;
 
-        .title {
-            text-align: center;
-            font-size: 32px;
-            margin: 40px 0;
-        }
+        .selection-container {
+            margin: 0 auto;
+            width: 1200px;
 
-        .selction-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            box-sizing: border-box;
-            justify-content: space-between;
+            .title {
+                text-align: center;
+                font-size: 32px;
+                margin: 40px 0;
+            }
 
-            .selection-item {
-                width: 384px;
+            .selction-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                box-sizing: border-box;
+                justify-content: space-between;
+
+                .selection-item {
+                    width: 384px;
+                }
             }
         }
     }
