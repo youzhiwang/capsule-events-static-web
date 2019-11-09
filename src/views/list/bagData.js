@@ -15,11 +15,6 @@ export default [
     text: '做旧脏脏单肩包'
   },
   {
-    tblink: 'https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17060393212.30.59b26114lrlwa8&id=587322254300',
-    src: '//img.alicdn.com/bao/uploaded/i2/2150857113/O1CN01kge45S22PniL4l8Mp_!!2150857113.png_240x240.jpg',
-    text: '设计师环保包袋特卖新年福利'
-  },
-  {
     tblink: 'https://item.taobao.com/item.htm?spm=a1z10.5-c.w4002-17060393212.33.59b26114lrlwa8&id=583481576453',
     src: '//img.alicdn.com/bao/uploaded/i2/2150857113/O1CN01dGVWpZ22PnhR3LpVQ_!!2150857113.png_240x240.jpg',
     text: '复古印章VINTAGE怦然心动 印花帆布袋'

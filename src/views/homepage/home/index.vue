@@ -11,7 +11,7 @@
                         <b-col cols="6">
                             <b-card-body title="Horizontal Card">
                                 <b-card-text>{{item.text}}</b-card-text>
-                                <b-button variant="primary" size="sm">前 往</b-button>
+                                <b-button :href="item.tblink" target="_blank" variant="primary" size="sm">前 往</b-button>
                             </b-card-body>
                         </b-col>
                     </b-row>
