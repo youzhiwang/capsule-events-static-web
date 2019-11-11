@@ -3,6 +3,9 @@
         <span class="item">
             <img class="beian-pic" :src="beian" alt="浙ICP备17000871号-3">浙ICP备17000871号-3</span>
         <span class="item">Designed by Capsule Events</span>
+        <span class="item">
+            <a href="mailto:service@goldenhour.com.cn">服务咨询service@goldenhour.com.cn</a>
+        </span>
     </div>
 </template>
 
@@ -37,6 +40,11 @@
                 display: inline-block;
                 vertical-align: middle;
                 margin-right: 4px;
+            }
+
+            a {
+                color: rgba(255, 255, 255, .7);
+                text-decoration: none;
             }
         }
     }
